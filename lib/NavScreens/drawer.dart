@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:kingroxnew/UI/screens/Draws.dart';
 import 'package:kingroxnew/UI/screens/home.dart';
+import 'package:kingroxnew/UI/screens/notifications.dart';
 import 'package:kingroxnew/UI/screens/wallet.dart';
 import 'package:kingroxnew/const/colours.dart';
 import 'package:line_icons/line_icons.dart';
@@ -35,10 +36,7 @@ class _HomeScreenState extends State<HomeScreen>
   static const List<Widget> _widgetOptions = <Widget>[
     Home(),
     Draws(),
-    Text(
-      'Search',
-      style: optionStyle,
-    ),
+    Notifications(),
     Wallet(),
   ];
 
@@ -52,47 +50,289 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Material(
       child: FancyDrawerWrapper(
-        backgroundColor: Colors.white,
+        backgroundColor: acccolour,
         controller: _controller,
         drawerItems: <Widget>[
           Text(
-            "Go to home",
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.purple.shade700,
-              fontWeight: FontWeight.bold,
-            ),
+            "KingRox",
+            textAlign: TextAlign.left,
+            style: GoogleFonts.poppins(
+                color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
           ),
           Text(
-            "About us",
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.purple.shade700,
-              fontWeight: FontWeight.bold,
+            "Jone Doe        jonedoe@email.com",
+            textAlign: TextAlign.left,
+            style: GoogleFonts.poppins(
+                color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
+          ),
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.all(Radius.circular(15))),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                children: [
+                  Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.black12),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(
+                          child: Icon(
+                        LineIcons.home,
+                        color: Colors.white,
+                      )),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "Home",
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Icon(
+                    LineIcons.arrowRight,
+                    color: Colors.white,
+                  )
+                ],
+              ),
             ),
           ),
-          Text(
-            "Our products",
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.purple.shade700,
-              fontWeight: FontWeight.bold,
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.all(Radius.circular(15))),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                children: [
+                  Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.black12),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(
+                          child: Icon(
+                        LineIcons.facebookMessenger,
+                        color: Colors.white,
+                      )),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "Transactions History",
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Icon(
+                    LineIcons.arrowRight,
+                    color: Colors.white,
+                  )
+                ],
+              ),
             ),
           ),
-          Text(
-            "Support us",
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.purple.shade700,
-              fontWeight: FontWeight.bold,
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.all(Radius.circular(15))),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                children: [
+                  Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.black12),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(
+                          child: Icon(
+                        LineIcons.list,
+                        color: Colors.white,
+                      )),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "Win Prize List",
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Icon(
+                    LineIcons.arrowRight,
+                    color: Colors.white,
+                  )
+                ],
+              ),
             ),
           ),
-          Text(
-            "Log out",
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.purple.shade700,
-              fontWeight: FontWeight.bold,
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.all(Radius.circular(15))),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                children: [
+                  Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.black12),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(
+                          child: Icon(
+                        LineIcons.moneyBill,
+                        color: Colors.white,
+                      )),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "Earn Money Program",
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Icon(
+                    LineIcons.arrowRight,
+                    color: Colors.white,
+                  )
+                ],
+              ),
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.all(Radius.circular(15))),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                children: [
+                  Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.black12),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(
+                          child: Icon(
+                        LineIcons.peopleCarry,
+                        color: Colors.white,
+                      )),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "My Orders",
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Icon(
+                    LineIcons.arrowRight,
+                    color: Colors.white,
+                  )
+                ],
+              ),
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.all(Radius.circular(15))),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Row(
+                children: [
+                  Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.black12),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(
+                          child: Icon(
+                        Icons.logout,
+                        color: Colors.white,
+                      )),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "LogOut",
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Icon(
+                    LineIcons.arrowRight,
+                    color: Colors.white,
+                  )
+                ],
+              ),
             ),
           ),
         ],
@@ -115,7 +355,7 @@ class _HomeScreenState extends State<HomeScreen>
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15.0),
-                    color: Colors.black12,
+                    color: Colors.white10,
                   ),
                   child: Center(
                     child: IconButton(

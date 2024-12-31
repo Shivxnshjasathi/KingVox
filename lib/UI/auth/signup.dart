@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kingroxnew/NavScreens/Navbar.dart';
 import 'package:kingroxnew/NavScreens/drawer.dart';
 import 'package:kingroxnew/UI/screens/home.dart';
 import 'package:kingroxnew/const/button.dart';
