@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:kingroxnew/UI/auth/signup.dart';
 import 'package:kingroxnew/const/button.dart';
 import 'package:kingroxnew/const/textfield.dart';
+import 'package:line_icons/line_icon.dart';
+import 'package:line_icons/line_icons.dart';
 
 class LoginUI extends StatefulWidget {
   const LoginUI({super.key});
@@ -264,7 +266,7 @@ class _LoginUIState extends State<LoginUI> {
                   children: [
                     Container(
                       height: 50,
-                      width: 220,
+                      width: 225,
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
@@ -282,19 +284,19 @@ class _LoginUIState extends State<LoginUI> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
-                            Icons.wechat,
+                            LineIcons.phone,
                             color: Colors.black,
                           ),
                           SizedBox(
                             width: 10,
                           ),
                           Text(
-                            "Chat with us",
+                            "Login with",
                             style: GoogleFonts.poppins(
                                 fontSize: 12, fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            "Whatsapp",
+                            " Mobile Number",
                             style: GoogleFonts.poppins(
                                 fontSize: 12, fontWeight: FontWeight.w500),
                           ),
