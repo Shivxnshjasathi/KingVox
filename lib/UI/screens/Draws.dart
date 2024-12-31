@@ -13,6 +13,7 @@ class _DrawsState extends State<Draws> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,47 +40,17 @@ class _DrawsState extends State<Draws> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "KingRox",
+                          "Draws",
                           textAlign: TextAlign.left,
                           style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 25,
                               fontWeight: FontWeight.bold),
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            color: Colors.black12,
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(5.0),
-                            child: Center(
-                              child: IconButton(
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                  icon: Icon(
-                                    Icons.menu,
-                                    color: Colors.white,
-                                  )),
-                            ),
-                          ),
-                        )
                       ],
                     ),
                     SizedBox(
                       height: 40,
-                    ),
-                    Text(
-                      "DRAWS",
-                      textAlign: TextAlign.left,
-                      style: GoogleFonts.poppins(
-                          color: Colors.white,
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      height: 20,
                     ),
                     SingleChildScrollView(
                         scrollDirection: Axis.horizontal,

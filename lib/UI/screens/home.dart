@@ -32,53 +32,18 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 Container(
-                  height: 100,
+                  height: 20,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(30),
-                        bottomRight: Radius.circular(30)),
+                        bottomLeft: Radius.circular(40),
+                        bottomRight: Radius.circular(40)),
                     gradient: LinearGradient(
                       colors: [
                         const Color(0xFF012c49),
-                        const Color(0xFF167cbf),
+                        const Color(0xFF012c49),
                       ],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "KingRox",
-                          textAlign: TextAlign.left,
-                          style: GoogleFonts.poppins(
-                              color: Colors.white,
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            color: Colors.black12,
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(5.0),
-                            child: Center(
-                              child: IconButton(
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                  icon: Icon(
-                                    Icons.menu,
-                                    color: Colors.white,
-                                  )),
-                            ),
-                          ),
-                        )
-                      ],
                     ),
                   ),
                 ),

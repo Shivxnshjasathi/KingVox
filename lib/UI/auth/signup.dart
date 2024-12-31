@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kingroxnew/NavScreens/Navbar.dart';
+import 'package:kingroxnew/NavScreens/drawer.dart';
 import 'package:kingroxnew/UI/screens/home.dart';
 import 'package:kingroxnew/const/button.dart';
 import 'package:kingroxnew/const/textfield.dart';
@@ -53,6 +55,7 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           Container(
@@ -328,7 +331,8 @@ class _SignupState extends State<Signup> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => Home()),
+                              MaterialPageRoute(
+                                  builder: (context) => HomeScreen()),
                             );
                           },
                           text: "Sent OTP",
