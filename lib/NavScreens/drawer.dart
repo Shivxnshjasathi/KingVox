@@ -8,6 +8,10 @@ import 'package:kingroxnew/UI/screens/home.dart';
 import 'package:kingroxnew/UI/screens/notifications.dart';
 import 'package:kingroxnew/UI/screens/wallet.dart';
 import 'package:kingroxnew/const/colours.dart';
+import 'package:kingroxnew/menu_screens/earn_money.dart';
+import 'package:kingroxnew/menu_screens/myorders.dart';
+import 'package:kingroxnew/menu_screens/transactions.dart';
+import 'package:kingroxnew/menu_screens/winPrizeList.dart';
 import 'package:line_icons/line_icons.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -124,183 +128,215 @@ class _HomeScreenState extends State<HomeScreen>
                   ),
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.black12,
-                    borderRadius: BorderRadius.all(Radius.circular(15))),
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            color: Colors.black12),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Center(
-                              child: Icon(
-                            LineIcons.facebookMessenger,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Transactions()),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.black12,
+                      borderRadius: BorderRadius.all(Radius.circular(15))),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              color: Colors.black12),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Center(
+                                child: Icon(
+                              LineIcons.facebookMessenger,
+                              color: Colors.white,
+                            )),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "Transactions ",
+                          style: GoogleFonts.poppins(
+                            fontSize: 16,
                             color: Colors.white,
-                          )),
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "Transactions History",
-                        style: GoogleFonts.poppins(
-                          fontSize: 16,
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Icon(
+                          LineIcons.arrowRight,
                           color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Icon(
-                        LineIcons.arrowRight,
-                        color: Colors.white,
-                      )
-                    ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.black12,
-                    borderRadius: BorderRadius.all(Radius.circular(15))),
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            color: Colors.black12),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Center(
-                              child: Icon(
-                            LineIcons.list,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Winprizelist()),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.black12,
+                      borderRadius: BorderRadius.all(Radius.circular(15))),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              color: Colors.black12),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Center(
+                                child: Icon(
+                              LineIcons.list,
+                              color: Colors.white,
+                            )),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "Win Prize List",
+                          style: GoogleFonts.poppins(
+                            fontSize: 16,
                             color: Colors.white,
-                          )),
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "Win Prize List",
-                        style: GoogleFonts.poppins(
-                          fontSize: 16,
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Icon(
+                          LineIcons.arrowRight,
                           color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Icon(
-                        LineIcons.arrowRight,
-                        color: Colors.white,
-                      )
-                    ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.black12,
-                    borderRadius: BorderRadius.all(Radius.circular(15))),
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            color: Colors.black12),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Center(
-                              child: Icon(
-                            LineIcons.moneyBill,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EarnMoney()),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.black12,
+                      borderRadius: BorderRadius.all(Radius.circular(15))),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              color: Colors.black12),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Center(
+                                child: Icon(
+                              LineIcons.moneyBill,
+                              color: Colors.white,
+                            )),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "Earn Money",
+                          style: GoogleFonts.poppins(
+                            fontSize: 16,
                             color: Colors.white,
-                          )),
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "Earn Money Program",
-                        style: GoogleFonts.poppins(
-                          fontSize: 16,
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Icon(
+                          LineIcons.arrowRight,
                           color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Icon(
-                        LineIcons.arrowRight,
-                        color: Colors.white,
-                      )
-                    ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.black12,
-                    borderRadius: BorderRadius.all(Radius.circular(15))),
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            color: Colors.black12),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Center(
-                              child: Icon(
-                            LineIcons.peopleCarry,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Myorders()),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.black12,
+                      borderRadius: BorderRadius.all(Radius.circular(15))),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              color: Colors.black12),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Center(
+                                child: Icon(
+                              LineIcons.peopleCarry,
+                              color: Colors.white,
+                            )),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "My Orders",
+                          style: GoogleFonts.poppins(
+                            fontSize: 16,
                             color: Colors.white,
-                          )),
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "My Orders",
-                        style: GoogleFonts.poppins(
-                          fontSize: 16,
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Icon(
+                          LineIcons.arrowRight,
                           color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Icon(
-                        LineIcons.arrowRight,
-                        color: Colors.white,
-                      )
-                    ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -385,82 +421,7 @@ class _HomeScreenState extends State<HomeScreen>
                   )
                 ],
               ),
-
               body: _widgetOptions[_selectedIndex],
-              // body: Center(
-              //   child: _widgetOptions.elementAt(_selectedIndex),
-              // ),
-              //   bottomNavigationBar: SingleChildScrollView(
-              //     scrollDirection: Axis.horizontal,
-              //     child: Container(
-              //       height: 90,
-              //       decoration: BoxDecoration(
-              //         borderRadius: BorderRadius.only(
-              //             topLeft: Radius.circular(30),
-              //             topRight: Radius.circular(30)),
-              //         color: Colors.white,
-              //         boxShadow: [
-              //           BoxShadow(
-              //             blurRadius: 20,
-              //             color: Colors.black.withOpacity(0.2),
-              //           )
-              //         ],
-              //       ),
-              //       child: SafeArea(
-              //         child: Padding(
-              //           padding: const EdgeInsets.all(8),
-              //           child:
-              //         GNav(
-              //           haptic: true,
-              //           style: GnavStyle.google,
-              //           textStyle: GoogleFonts.poppins(
-              //               color: Colors.white,
-              //               fontWeight: FontWeight.bold,
-              //               fontSize: 12),
-              //           rippleColor: primaryColour,
-              //           hoverColor: secolour,
-              //           gap: 8,
-              //           activeColor: Colors.white,
-              //           iconSize: 24,
-              //           duration: Duration(milliseconds: 400),
-              //           tabBackgroundColor: acccolour,
-              //           color: Colors.black,
-              //           tabs: [
-              //             GButton(
-              //               backgroundColor: Colors.black,
-
-              //               icon: LineIcons.home,
-              //               text: 'Home',
-              //             ),
-              //             GButton(
-              //               icon: LineIcons.playCircleAlt,
-              //               text: 'Draws',
-              //             ),
-              //             GButton(
-              //               icon: LineIcons.bell,
-              //               text: 'Notifications',
-              //             ),
-              //             GButton(
-              //               icon: LineIcons.wallet,
-              //               text: 'Wallet',
-              //             ),
-              //             GButton(
-              //               icon: LineIcons.user,
-              //               text: 'Profile',
-              //             ),
-              //           ],
-              //           selectedIndex: _selectedIndex,
-              //           onTabChange: (index) {
-              //             setState(() {
-              //               _selectedIndex = index;
-              //             });
-              //           },
-              //         ),
-              //       ),
-              //     ),
-              //   ),
-              // ),
-
               bottomNavigationBar: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -514,7 +475,6 @@ class _HomeScreenState extends State<HomeScreen>
             )));
   }
 
-  // Custom navigation item widget
   Widget _buildNavItem({
     required int index,
     required bool isSelected,
@@ -534,10 +494,10 @@ class _HomeScreenState extends State<HomeScreen>
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.5), // Shadow color
-                  spreadRadius: 2, // Spread radius
-                  blurRadius: 5, // Blur radius
-                  offset: const Offset(0, 4), // Shadow position (x, y)
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 2,
+                  blurRadius: 5,
+                  offset: const Offset(0, 4),
                 ),
               ],
               color: Colors.white,
@@ -564,11 +524,10 @@ class _HomeScreenState extends State<HomeScreen>
               ],
             ),
           ),
-          // Dot indicator
           SizedBox(height: 4),
           AnimatedContainer(
             duration: Duration(milliseconds: 300),
-            width: isSelected ? 8 : 0, // Show dot only for selected
+            width: isSelected ? 8 : 0,
             height: isSelected ? 8 : 0,
             decoration: BoxDecoration(
               color: acccolour,

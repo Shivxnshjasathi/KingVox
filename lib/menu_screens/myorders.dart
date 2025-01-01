@@ -1,18 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kingroxnew/const/colours.dart';
 import 'package:line_icons/line_icons.dart';
 
-class Notifications extends StatefulWidget {
-  const Notifications({super.key});
+class Myorders extends StatefulWidget {
+  const Myorders({super.key});
 
   @override
-  State<Notifications> createState() => _NotificationsState();
+  State<Myorders> createState() => _MyordersState();
 }
 
-class _NotificationsState extends State<Notifications> {
+class _MyordersState extends State<Myorders> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "My Orders",
+            textAlign: TextAlign.left,
+            style: GoogleFonts.poppins(
+                color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(
+                Icons.arrow_back_ios,
+                color: Colors.white,
+              )),
+          centerTitle: true,
+          backgroundColor: acccolour,
+        ),
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
             child:
@@ -36,19 +55,6 @@ class _NotificationsState extends State<Notifications> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Notifications",
-                        textAlign: TextAlign.left,
-                        style: GoogleFonts.poppins(
-                            color: Colors.white,
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
                   SizedBox(
                     height: 20,
                   ),
@@ -101,46 +107,65 @@ Widget tite(String noti) {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            height: 40,
-            width: 40,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100.0),
-              gradient: LinearGradient(
-                colors: [
-                  Colors.yellow.shade200,
-                  Colors.yellow.shade800,
-                ],
-                stops: [0.0, 0.9],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomCenter,
-              ),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Center(child: Icon(LineIcons.facebookMessenger)),
-            ),
-          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Top-up of voucher AED35",
+                "Hoodi JACOB1778",
                 style: GoogleFonts.poppins(
                     fontSize: 12, fontWeight: FontWeight.bold),
               ),
               Text(
-                "From Wallet",
+                "408241502",
                 style: GoogleFonts.poppins(
                     fontSize: 10, fontWeight: FontWeight.w500),
               ),
             ],
           ),
-          Icon(
-            Icons.arrow_forward_ios_rounded,
-            color: Colors.black,
-          )
+          Row(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "congratulations",
+                    style: GoogleFonts.poppins(
+                        fontSize: 12, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "You've Won!",
+                    style: GoogleFonts.poppins(
+                        fontSize: 10, fontWeight: FontWeight.w500),
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              Container(
+                height: 40,
+                width: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100.0),
+                  gradient: LinearGradient(
+                    colors: [
+                      Colors.yellow.shade200,
+                      Colors.yellow.shade800,
+                    ],
+                    stops: [0.0, 0.9],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomCenter,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Center(child: Icon(LineIcons.download)),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     ),

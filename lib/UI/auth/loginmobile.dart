@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kingroxnew/UI/auth/loginmobile.dart';
+import 'package:kingroxnew/UI/auth/login.dart';
 import 'package:kingroxnew/UI/auth/signup.dart';
 import 'package:kingroxnew/const/button.dart';
 import 'package:kingroxnew/const/textfield.dart';
-import 'package:line_icons/line_icon.dart';
 import 'package:line_icons/line_icons.dart';
 
-class LoginUI extends StatefulWidget {
-  const LoginUI({super.key});
+class Loginmobile extends StatefulWidget {
+  const Loginmobile({super.key});
 
   @override
-  State<LoginUI> createState() => _LoginUIState();
+  State<Loginmobile> createState() => _LoginmobileState();
 }
 
-class _LoginUIState extends State<LoginUI> {
+class _LoginmobileState extends State<Loginmobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,7 +104,7 @@ class _LoginUIState extends State<LoginUI> {
                           height: 30,
                         ),
                         CustomTextField(
-                          text: "Email Address*",
+                          text: "Mobile Number*",
                         ),
                         SizedBox(
                           height: 20,
@@ -258,7 +257,7 @@ class _LoginUIState extends State<LoginUI> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Loginmobile()),
+                      MaterialPageRoute(builder: (context) => LoginUI()),
                     );
                   },
                   child: Row(
@@ -283,7 +282,7 @@ class _LoginUIState extends State<LoginUI> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(
-                              LineIcons.phone,
+                              LineIcons.googleLogo,
                               color: Colors.black,
                             ),
                             SizedBox(
