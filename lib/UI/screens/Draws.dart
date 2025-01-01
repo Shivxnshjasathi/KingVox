@@ -72,33 +72,10 @@ class _DrawsState extends State<Draws> {
                               SizedBox(
                                 height: 2.5,
                               ),
-                              Container(
-                                height: 50,
-                                padding: const EdgeInsets.symmetric(
-                                    vertical: 10.0, horizontal: 16.0),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(30.0),
-                                    color: Colors.black12),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    Center(
-                                      child: Text(
-                                        "Upcoming Draws",
-                                        textAlign: TextAlign.left,
-                                        style: GoogleFonts.poppins(
-                                            color: Colors.black,
-                                            fontSize: 13,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
                             ],
                           ),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               SizedBox(
                                 width: 170,
@@ -174,17 +151,18 @@ Widget tile() {
               color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(40))),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 height: 180,
                 width: 400,
               ),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10),
+                padding: const EdgeInsets.all(10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       "CONGRATS!",
@@ -195,7 +173,7 @@ Widget tile() {
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "Mohammad Hussain Shaik on winning",
+                      "Mohammad on winning",
                       textAlign: TextAlign.left,
                       style: GoogleFonts.poppins(
                           color: Colors.black,

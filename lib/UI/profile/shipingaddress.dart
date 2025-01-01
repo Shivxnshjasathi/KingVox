@@ -64,13 +64,13 @@ class _ShipingaddressState extends State<Shipingaddress> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          width: 180,
+                          width: MediaQuery.of(context).size.width / 2.3,
                           child: CustomTextField(
                             text: "First Name*",
                           ),
                         ),
                         SizedBox(
-                          width: 180,
+                          width: MediaQuery.of(context).size.width / 2.3,
                           child: CustomTextField(
                             text: "Last Name*",
                           ),
@@ -84,13 +84,13 @@ class _ShipingaddressState extends State<Shipingaddress> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          width: 180,
+                          width: MediaQuery.of(context).size.width / 2.3,
                           child: CustomTextField(
                             text: "Address*",
                           ),
                         ),
                         SizedBox(
-                          width: 180,
+                          width: MediaQuery.of(context).size.width / 2.3,
                           child: CustomTextField(
                             text: "City*",
                           ),
@@ -104,13 +104,13 @@ class _ShipingaddressState extends State<Shipingaddress> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          width: 100,
+                          width: MediaQuery.of(context).size.width / 3.5,
                           child: CustomTextField(
                             text: "+971",
                           ),
                         ),
                         SizedBox(
-                          width: 260,
+                          width: MediaQuery.of(context).size.width / 1.7,
                           child: CustomTextField(
                             text: "Contact Number*",
                           ),
@@ -124,13 +124,13 @@ class _ShipingaddressState extends State<Shipingaddress> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          width: 180,
+                          width: MediaQuery.of(context).size.width / 2.3,
                           child: CustomTextField(
                             text: "Nationality*",
                           ),
                         ),
                         SizedBox(
-                          width: 180,
+                          width: MediaQuery.of(context).size.width / 2.3,
                           child: CustomTextField(
                             text: "Residence Country*",
                           ),

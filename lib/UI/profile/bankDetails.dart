@@ -76,13 +76,13 @@ class _BankdetailsState extends State<Bankdetails> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          width: 180,
+                          width: MediaQuery.of(context).size.width / 2.3,
                           child: CustomTextField(
                             text: "IFSC Code*",
                           ),
                         ),
                         SizedBox(
-                          width: 180,
+                          width: MediaQuery.of(context).size.width / 2.3,
                           child: CustomTextField(
                             text: "Sort Code*",
                           ),
@@ -102,13 +102,13 @@ class _BankdetailsState extends State<Bankdetails> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          width: 180,
+                          width: MediaQuery.of(context).size.width / 2.3,
                           child: CustomTextField(
                             text: "Routing Code*",
                           ),
                         ),
                         SizedBox(
-                          width: 180,
+                          width: MediaQuery.of(context).size.width / 2.3,
                           child: CustomTextField(
                             text: "Number*",
                           ),

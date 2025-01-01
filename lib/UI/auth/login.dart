@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kingroxnew/NavScreens/drawer.dart';
 import 'package:kingroxnew/UI/auth/loginmobile.dart';
 import 'package:kingroxnew/UI/auth/signup.dart';
 import 'package:kingroxnew/const/button.dart';
@@ -117,7 +118,13 @@ class _LoginUIState extends State<LoginUI> {
                           height: 20,
                         ),
                         CustomButton(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomeScreen()),
+                            );
+                          },
                           text: "Login",
                         )
                       ],

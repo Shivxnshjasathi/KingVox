@@ -90,7 +90,7 @@ class _PaymentState extends State<Payment> {
                               width: 160,
                               height: 30,
                               decoration: BoxDecoration(
-                                  color: Colors.white10,
+                                  color: Colors.white,
                                   borderRadius: BorderRadius.all(
                                     Radius.circular(5),
                                   )),
@@ -111,7 +111,7 @@ class _PaymentState extends State<Payment> {
                                         ),
                                       ),
                                       DropdownButton<String>(
-                                        value: "1", 
+                                        value: "1", // Default value
                                         items: ["1", "2", "3", "4", "5"]
                                             .map((String value) {
                                           return DropdownMenuItem<String>(
@@ -127,11 +127,11 @@ class _PaymentState extends State<Payment> {
                                           );
                                         }).toList(),
                                         onChanged: (String? newValue) {
-                                          
+                                          // Handle dropdown value change
                                           print('Selected: $newValue');
                                         },
                                         underline:
-                                            SizedBox(), 
+                                            SizedBox(), // Removes the default underline
                                       ),
                                     ],
                                   ),
@@ -374,10 +374,10 @@ Widget tile2() {
     decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.3), 
-            spreadRadius: 2, 
-            blurRadius: 5, 
-            offset: const Offset(0, 4), 
+            color: Colors.grey.withOpacity(0.3), // Shadow color
+            spreadRadius: 2, // Spread radius
+            blurRadius: 5, // Blur radius
+            offset: const Offset(0, 4), // Shadow position (x, y)
           ),
         ],
         color: Colors.white,
@@ -391,10 +391,10 @@ Widget tile2() {
           decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.3), 
-                  spreadRadius: 2, 
-                  blurRadius: 5, 
-                  offset: const Offset(0, 4), 
+                  color: Colors.grey.withOpacity(0.3), // Shadow color
+                  spreadRadius: 2, // Spread radius
+                  blurRadius: 5, // Blur radius
+                  offset: const Offset(0, 4), // Shadow position (x, y)
                 ),
               ],
               color: Colors.white,
@@ -402,7 +402,7 @@ Widget tile2() {
           child: ClipRRect(
             borderRadius: BorderRadius.all(Radius.circular(40)),
             child: Image.network(
-              "https:
+              "https://images.pexels.com/photos/47344/dollar-currency-money-us-dollar-47344.jpeg?auto=compress&cs=tinysrgb&w=600",
               fit: BoxFit.cover,
             ),
           ),
