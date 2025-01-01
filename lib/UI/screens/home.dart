@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kingroxnew/UI/screens/Draws.dart';
+import 'package:kingroxnew/UI/screens/ticketa_deatils_screen.dart';
 import 'package:kingroxnew/const/button.dart';
 
 class Home extends StatefulWidget {
@@ -83,7 +84,8 @@ class _HomeState extends State<Home> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Draws()),
+                          MaterialPageRoute(
+                              builder: (context) => TicketaDeatilsScreen()),
                         );
                       },
                       child: tile()),
