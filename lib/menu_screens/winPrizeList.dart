@@ -103,7 +103,7 @@ Widget tite(String noti) {
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(30))),
     child: Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -143,6 +143,11 @@ Widget tite(String noti) {
                   ),
                   Text(
                     "RIGHT7922",
+                    style: GoogleFonts.poppins(
+                        fontSize: 10, fontWeight: FontWeight.w500),
+                  ),
+                  Text(
+                    "0006  - 2024-12-11",
                     style: GoogleFonts.poppins(
                         fontSize: 10, fontWeight: FontWeight.w500),
                   ),

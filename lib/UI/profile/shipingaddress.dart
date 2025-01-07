@@ -126,7 +126,7 @@ class _ShipingaddressState extends State<Shipingaddress> {
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 2.3,
                           child: CustomTextField(
-                            text: "Nationality*",
+                            text: "State*",
                           ),
                         ),
                         SizedBox(

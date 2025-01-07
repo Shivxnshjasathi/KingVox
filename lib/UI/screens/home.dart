@@ -5,6 +5,8 @@ import 'package:kingroxnew/UI/screens/Draws.dart';
 import 'package:kingroxnew/UI/screens/ticketa_deatils_screen.dart';
 import 'package:kingroxnew/const/NRE.dart';
 import 'package:kingroxnew/const/button.dart';
+import 'package:kingroxnew/const/button2.dart';
+import 'package:kingroxnew/const/colours.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -97,11 +99,11 @@ class _HomeState extends State<Home> {
                   ),
                   InkWell(
                       onTap: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //       builder: (context) => TicketaDeatilsScreen()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => TicketaDeatilsScreen()),
+                        );
                       },
                       child: tile()),
                   SizedBox(
@@ -120,7 +122,7 @@ class _HomeState extends State<Home> {
 
 Widget tile() {
   return Container(
-    height: 435,
+    height: 480,
     decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -160,10 +162,21 @@ Widget tile() {
         Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Text(
+                "Hoodie",
+                textAlign: TextAlign.left,
+                style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500),
+              ),
+              SizedBox(
+                height: 3,
+              ),
               GradientText(
-                'Win',
+                'Win 1 Million Cash Prize',
                 gradient: LinearGradient(
                   colors: [
                     const Color(0xFF167cbf),
@@ -171,92 +184,78 @@ Widget tile() {
                   ],
                 ),
                 style: GoogleFonts.poppins(
-                  fontSize: 30,
+                  fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              SizedBox(
+                height: 3,
+              ),
               Text(
-                "AED200,000 Cash",
+                "3 Winners Out of 20 Tickets",
                 textAlign: TextAlign.left,
                 style: GoogleFonts.poppins(
                     color: Colors.black,
-                    fontSize: 18,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold),
               ),
-              Stack(
-                children: [
-                  Column(
-                    children: [
-                      SizedBox(
-                        height: 2.5,
-                      ),
-                      Container(
-                        height: 55,
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 16.0),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30.0),
-                          gradient: LinearGradient(
-                            colors: [
-                              Colors.yellow.shade200,
-                              Colors.yellow.shade800,
-                            ],
-                            stops: [0.0, 0.9],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomCenter,
-                          ),
-                        ),
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Buy AED7",
-                                    style: GoogleFonts.poppins(
-                                      color: const Color(0xFF012c49),
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Modesh Shopping Card",
-                                    style: GoogleFonts.poppins(
-                                      color: const Color(0xFF012c49),
-                                      fontSize: 10.0,
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ]),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      SizedBox(
-                        width: 150,
-                        child: CartButton(
-                          label: "Add to Cart",
-                          hight: 60,
-                        ),
-                      ),
-                    ],
-                  )
-                ],
+              SizedBox(
+                height: 3,
+              ),
+              Text(
+                "Draw Date will be announced after all the tickets are sold-out",
+                style: GoogleFonts.poppins(
+                  color: Colors.grey,
+                  fontSize: 10.0,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              SizedBox(
+                height: 16,
               ),
               Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                        width: 150,
+                        child: CustomButton2(
+                          onTap: () {},
+                          text: "Start 142.97",
+                        )),
+                    SizedBox(
+                        width: 150,
+                        child: CustomButton(
+                          onTap: () {},
+                          text: "Breakdown",
+                        ))
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+              width: 250,
+              decoration: BoxDecoration(
+                  color: acccolour,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(30))),
+              child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Draw Date 2 January,2025",
+                      "WINNERS WILL BE DECLARED SOON",
                       style: GoogleFonts.poppins(
-                        color: Colors.grey,
+                        color: Colors.white,
                         fontSize: 10.0,
                         fontWeight: FontWeight.w400,
                       ),
@@ -264,8 +263,8 @@ Widget tile() {
                   ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ],
     ),

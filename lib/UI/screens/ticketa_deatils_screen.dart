@@ -4,6 +4,8 @@ import 'package:kingroxnew/UI/screens/Draws.dart';
 import 'package:kingroxnew/UI/screens/home.dart';
 import 'package:kingroxnew/UI/screens/payment.dart';
 import 'package:kingroxnew/const/button.dart';
+import 'package:kingroxnew/const/button2.dart';
+import 'package:kingroxnew/const/cart.dart';
 import 'package:kingroxnew/const/colours.dart';
 import 'package:kingroxnew/const/textfield.dart';
 import 'package:line_icons/line_icons.dart';
@@ -64,17 +66,10 @@ class _TicketaDeatilsScreenState extends State<TicketaDeatilsScreen> {
                     SizedBox(
                       height: 20,
                     ),
-                    tile(),
+                    gdeatile(),
                     SizedBox(
                       height: 20,
                     ),
-                    tite3("Win 1 Million Cash Prize",
-                        Icon(LineIcons.cashRegister)),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    tite3(
-                        "Win 1 Million Cash Prize", Icon(LineIcons.moneyBill)),
                     SizedBox(
                       height: 20,
                     ),
@@ -291,6 +286,144 @@ class GradientText extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget gdeatile() {
+  return Container(
+    height: 490,
+    decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3), // Shadow color
+            spreadRadius: 2, // Spread radius
+            blurRadius: 5, // Blur radius
+            offset: const Offset(0, 4), // Shadow position (x, y)
+          ),
+        ],
+        color: Colors.white,
+        borderRadius: BorderRadius.all(Radius.circular(40))),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          height: 250,
+          width: 400,
+          decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.3), // Shadow color
+                  spreadRadius: 2, // Spread radius
+                  blurRadius: 5, // Blur radius
+                  offset: const Offset(0, 4), // Shadow position (x, y)
+                ),
+              ],
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(40))),
+          child: ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(40)),
+            child: Image.network(
+              "https://images.pexels.com/photos/47344/dollar-currency-money-us-dollar-47344.jpeg?auto=compress&cs=tinysrgb&w=600",
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                "Buy Hoodie And",
+                textAlign: TextAlign.left,
+                style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500),
+              ),
+              SizedBox(
+                height: 3,
+              ),
+              GradientText(
+                'Win 1 Million Cash Prize',
+                gradient: LinearGradient(
+                  colors: [
+                    const Color(0xFF167cbf),
+                    const Color(0xFFfcce19),
+                  ],
+                ),
+                style: GoogleFonts.poppins(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 3,
+              ),
+              Text(
+                "Series : FULLFINAL6965",
+                textAlign: TextAlign.left,
+                style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                        width: 150,
+                        child: CustomButton2(
+                          onTap: () {},
+                          text: "Start 142.97",
+                        )),
+                    SizedBox(
+                        width: 150,
+                        child: CustomButton(
+                          onTap: () {},
+                          text: "Breakdown",
+                        ))
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Free Raffle Tickets Qty",
+                      style: GoogleFonts.poppins(
+                        color: Colors.black,
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 30,
+                    ),
+                    SizedBox(
+                      width: 45,
+                      child: CustomTextField(
+                        text: " 0",
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
 }
 
 Widget tite3(String tesxt, Icon icons) {

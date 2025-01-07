@@ -110,7 +110,7 @@ class _LoginmobileState extends State<Loginmobile> {
                           height: 20,
                         ),
                         CustomTextField(
-                          text: "Password*",
+                          text: "OTP*",
                         ),
                         SizedBox(
                           height: 20,

@@ -103,7 +103,7 @@ Widget tite(String noti) {
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(30))),
     child: Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -121,6 +121,11 @@ Widget tite(String noti) {
                 style: GoogleFonts.poppins(
                     fontSize: 10, fontWeight: FontWeight.w500),
               ),
+              Text(
+                "11-12-2024",
+                style: GoogleFonts.poppins(
+                    fontSize: 10, fontWeight: FontWeight.w500),
+              ),
             ],
           ),
           Row(
@@ -130,7 +135,7 @@ Widget tite(String noti) {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "congratulations",
+                    "Congratulations",
                     style: GoogleFonts.poppins(
                         fontSize: 12, fontWeight: FontWeight.bold),
                   ),
@@ -143,6 +148,29 @@ Widget tite(String noti) {
               ),
               SizedBox(
                 width: 20,
+              ),
+              Container(
+                height: 40,
+                width: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100.0),
+                  gradient: LinearGradient(
+                    colors: [
+                      Colors.yellow.shade200,
+                      Colors.yellow.shade800,
+                    ],
+                    stops: [0.0, 0.9],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomCenter,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Center(child: Icon(LineIcons.print)),
+                ),
+              ),
+              SizedBox(
+                width: 3,
               ),
               Container(
                 height: 40,
